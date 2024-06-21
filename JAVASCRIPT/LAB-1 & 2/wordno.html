@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        a=prompt("enter number between 0 to 999")
+        if(a>=0||a<=999){
+            if(a/100!=0){
+
+            }else if(a/10!=0){
+
+            }else {//a>=0||a<=9
+                switch(a){
+                    case '0':document.write("zero");
+                             break;
+                    case '1':document.write("one");
+                             break;
+                    case '2':document.write("two");
+                             break;
+                    case '3':document.write("three");
+                             break;
+                    case '4':document.write("four");
+                             break;
+                    case '5':document.write("five");
+                             break;
+                    case '6':document.write("one");
+                             break;
+                    case '7':document.write("one");
+                             break;
+                    case '8':document.write("one");
+                             break;
+                    case '':document.write("one");
+                             break;
+                }
+            }
+            // while(a!=0){
+            //     r=a%10 
+            //   d=d*10+r
+            //   a=Math.floor(a/10)
+            // }
+            document.write("valid number");
+        }else if(a<0||a>999){
+            document.write("out of range");
+        }else{
+            document.write("not a number");
+        }
+    </script>
+</body>
+</html>

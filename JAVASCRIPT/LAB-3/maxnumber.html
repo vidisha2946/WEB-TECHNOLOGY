@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = []
+        var n = parseInt(prompt("enter the size of array"))
+        for (let i = 0; i < n; i++) {
+            arr[i] = parseInt(prompt(`Enter ${i}th element::`))
+        };
+        temp = arr[0]
+        for (i= 0; i< n; i++) {
+            for (j = i + 1; j < n; j++) {
+                if (temp < arr[j]) {
+                    temp = arr[j];
+                }
+            }
+        }
+        console.log(temp);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-1</title>
+</head>
+<style>
+    body{
+        background-color: aqua;
+        border: solid 5px;
+        padding: 20px;
+    }
+    h1{
+        text-align: center;
+    }
+    .Name{
+        font-size: 20px ;
+        text-align: start;
+        font-weight: 600;
+    }
+    .box{
+        width: 98%;
+        height: 30px;
+        border-radius: 5px;
+    }
+    .name{
+        width: 99%;
+        height: 34px;
+        background-color: rgb(6, 101, 44);
+        color: aliceblue;
+        font-size: larger;
+    }
+    
+</style>
+<body>
+    <form>
+    <h1>Student registration form</h1><hr>
+    <div class="Name">First Name<br></div>
+        <input class="box" type="text" placeholder="First Name"><br><br>
+    <div class="Name">Middle Name<br></div>
+        <input class="box" type="text" placeholder="Middle name"><br><br>
+    <div class="Name">Last Name<br></div>
+        <input class="box" type="text" placeholder="Last name"><br><br>
+    <div class="Name">course </div>
+        <select><option >course</option></select><br><br>
+    <div class="Name">gender:<br><br>Male<input type="radio" checked>Female<input type="radio">Other<input type="radio"><br><br></div>
+    <div class="Name">Phone:<br><input class="box" type="number" placeholder="+91"><br></div><br>
+    <div class="Name">Address:<br></div>
+    <textarea style="border-radius: 5px; border: 5px;" type="text" rows="5" cols="150">Add your address</textarea><br><br>
+    <div  class="Name">E-mail:<br><input  class="box" type="email" placeholder="E-mail"></div><br><br>
+    <div class="Name">Password:<br><input class="box" type="password" placeholder="Enter a password"></div><br><br>
+    <div class="Name">Re-Password:<br><input class="box" type="password"></div><br><br>
+    <input class="name" type="submit">
+
+
+</form>
+</body>
+</html>

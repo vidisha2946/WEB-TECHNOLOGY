@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+   a=parseInt(prompt("enter number 1"))
+    temp=a
+    d=a
+    n=0
+    r=0
+    num=0
+    while(a!=0){
+        // r=a%10
+       a=Math.floor(a/10) 
+       n++
+    }
+    //d=n
+    while(temp!=0){
+        r=temp%10 
+        //d=d*10+r
+        num+=Math.pow(r,n)
+        temp=Math.floor(temp/10)
+     }
+    if(num==d){
+        document.write("number is armstrong")
+    }else{
+        document.write("number is not armstrong")
+    }
+
+   </script> 
+</body>
+</html>

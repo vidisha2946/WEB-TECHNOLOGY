@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extra</title>
+</head>
+<body>
+    <script>
+        const student =
+         [
+            {name:"Name",rollno:"rollno",email:"email-id"},
+            {name:"Vidisha",rollno:101,email:"vidisha@darshan.ac.in"},
+            {name:"Diya",rollno:102,email:"diya@darshan.ac.in"},
+            {name:"Drasti",rollno:103,email:"drasti@darshan.ac.in"},
+            {name:"Radhika",rollno:104,email:"radhika@darshan.ac.in"},
+            {name:"Rasi",rollno:105,email:"rashi@darshan.ac.in"}
+        ];
+        document.write("<table border=5>");
+        for(i=0;i<student.length;i++)
+        {
+            document.write("<tr>");
+            document.write("<th>"+student[i].rollno +"</td>");
+            document.write("<td>"+student[i].name +"</td>");
+            document.write("<td>"+student[i].email +"</td>");
+            document.write("</tr>");
+        }
+        
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        let size = parseInt(prompt("enter Size of an array: "));
+        var arr = [];
+        for (let i = 0; i < size; i++) {
+            arr[i] = parseInt(prompt(`Enter ${i}th element`))
+        }
+        document.getElementById("demo1").innerHTML = arr;
+        arr.sort(function (a, b) { return a - b });
+        document.getElementById("demo2").innerHTML = arr;
+
+    </script>
+</body>
+
+</html>

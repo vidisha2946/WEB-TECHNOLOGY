@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        a=parseInt(prompt("enter 1st number"))
+        b=parseInt(prompt("enter 2nd number"))
+        
+        for(i=a;i<=b;i++){
+            count=0;
+         for(j=1;j<=i;j++){
+          if(i%j==0){
+            count++;
+            //break;
+        //   document.write(i+" ");
+         }
+       }
+       if(count<=2){
+        document.write(i);
+      }
+    }
+    </script>
+</body>
+</html>
