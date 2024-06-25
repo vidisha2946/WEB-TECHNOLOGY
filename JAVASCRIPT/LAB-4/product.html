@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let productName =prompt("Enter product no: ")
+        let product = []
+        for(let i=0;i<productName;i++){
+            let nameOfProduct = prompt(`enter the name of product ${i}: `)
+            let priceOfProduct = prompt(`enter the price of product ${i}: `)
+            product.push(nameOfProduct)
+            product.push(priceOfProduct)
+        }
+        console.log("Products")
+        for(let i=0;i<product.length;i++){
+            console.log(`${i + 1}. ${product[i]}`);
+        }
+    </script>
+</body>
+</html>

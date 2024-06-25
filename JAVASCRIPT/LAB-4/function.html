@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let fruits = ["Apple", "Banana", "Cherry"];
+        console.log("Initial array:", fruits, "<br/>");
+
+        // push 
+        fruits.push("Dragonfruit");
+        console.log("After push:", fruits, "<br/>");
+
+        // pop - Remove the last  
+        let lastFruit = fruits.pop();
+        console.log("After pop:", fruits,);
+        console.log("Popped element:", lastFruit, "<br/>");
+
+        // shift - Remove the first 
+        let firstFruit = fruits.shift();
+        console.log("After shift:", fruits,);
+        console.log("Shifted element:", firstFruit, "<br/>");
+
+        // unshift - add the first
+        fruits.unshift("Elderberry", "<br/>");
+        console.log("After unshift:", fruits, "<br/>");
+
+        // splice
+        // Adding elements
+        fruits.splice(1, 0, "Fig", "Grape", "<br/>");
+        console.log("After splice (adding):", fruits, "<br/>");
+
+        // Removing elements
+        let removedFruits = fruits.splice(2, 2);
+        console.log("After splice (removing):", fruits, "<br/>");
+        console.log("Removed elements:", removedFruits, "<br/>");
+
+        // sort 
+        fruits.sort();
+        console.log("After sort:", fruits, "<br/>");
+
+    </script>
+</body>
+
+</html>

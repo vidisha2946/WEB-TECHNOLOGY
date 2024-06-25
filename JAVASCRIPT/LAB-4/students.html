@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numberOfstudents = prompt("enter students numbers: ")
+        let students = []
+        for(let i=0;i<numberOfstudents;i++){
+            let studentName = prompt(`Enter the name of student ${i}:`);
+            let studentSpi = prompt(`Enter SPI of student ${i}:`);
+            students.push(studentName);
+            students.push(studentSpi);
+        }
+        console.log("students:");
+        for (let i = 0; i < students.length; i++) {
+            console.log(`${i + 1}. ${students[i]}`);
+        }
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
