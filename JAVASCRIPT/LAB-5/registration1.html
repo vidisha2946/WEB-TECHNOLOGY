@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration-form</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #fbfafa;
+    }
+
+    h1 {
+        font-family: 'Times New Roman', Times, serif;
+        color: darkslategrey
+    }
+
+    .regis {
+        background-color: #e4e4e4;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px black;
+    }
+    .btn{
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="regis">
+        
+            <h1>Registration Form</h1>
+            User Name: <input type="text" id="username"><br><br>
+            E-mail: <input type="email" id="email"><br><br>
+            Password: <input type="password" id="passWord"> <br> <br>
+            Repete Password: <input type="password" id="repeat"> <br><br>
+            Enrollment: <input type="text" id="enroll"><br><br>
+            Phone Number: <input type="text" id="phoneNumber"> <br> <br>
+            <div class="btn"><button id="btn" onclick="validate()">Submit</button></div>
+            <div id="successMsg" style="color: green;"></div>
+            <div id="errorMsg" style="color: red;"></div>
+      
+        <script>
+            function validate(){
+                username = document.getElementById("username").value
+                userRegex = /^[0-9A-Za-z]{6,16}$/ ;               
+                if(userRegex.test(username)){
+                document.getElementById("errorMsg").innerHTML=""
+                }
+                else{
+                    document.getElementById("errorMsg").innerHTML=" InValid username";
+                    document.getElementById("successMsg").innerHTML=""
+                } 
+
+                email = document.getElementById("email").value
+                userRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+                if(userRegex.test(email)){
+                document.getElementById("errorMsg").innerHTML=""
+                }
+                else{
+                    document.getElementById("errorMsg").innerHTML=" InValid email";
+                    document.getElementById("successMsg").innerHTML=""
+                }
+
+                passWord = document.getElementById("passWord").value
+                userRegex = /^(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,12}$/;
+                if(userRegex.test(passWord)){
+                document.getElementById("errorMsg").innerHTML=""
+                }
+                else{
+                    document.getElementById("errorMsg").innerHTML=" InValid passWord";
+                    document.getElementById("successMsg").innerHTML=""
+                }
+                repeat= document.getElementById("repeat").value
+                if(passWord==repeat){
+                    document.getElementById("errorMsg").innerHTML=""
+                }
+                else{
+                    document.getElementById("errorMsg").innerHTML=" Re-enter passWord";
+                }
+                enroll = document.getElementById("enroll").value
+                userRegex = /^[0-11]*\d$/
+                if(userRegex.test(enroll)){
+                document.getElementById("errorMsg").innerHTML=""
+                }
+                else{
+                    document.getElementById("errorMsg").innerHTML=" InValid enrollment";
+                    document.getElementById("successMsg").innerHTML=""
+                }
+                phoneNumber = document.getElementById("phoneNumber").value
+                userRegex = /^[0-9]*\d$/
+                if(userRegex.test(phoneNumber)){
+                document.getElementById("errorMsg").innerHTML=""
+                }
+                else{
+                    document.getElementById("errorMsg").innerHTML=" InValid phoneNumber";
+                    document.getElementById("successMsg").innerHTML=""
+                }
+
+
+
+                
+            }
+        </script>
+    </div>
+    
+    
+</body>
+
+</html>
