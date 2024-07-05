@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+            box-sizing: border-box;
+        }
+
+        body {
+
+            font-family: Arial, sans-serif;
+        }
+
+        #button {
+            margin-left: 450px;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+</style>
+<body>
+    <div id="div1" style="height: 70px;width: 70px;"></div>
+    <button onclick="changeColor()"> change colour</button>
+</body>
+<script>
+    function changeColor(){
+        r = Math.floor(Math.random()*255)
+        g = Math.floor(Math.random()*255)
+        b = Math.floor(Math.random()*255)
+
+        document.getElementById("div1").style.background="rgb("+r+","+g+","+b+")"
+    }
+</script>
+</html>
