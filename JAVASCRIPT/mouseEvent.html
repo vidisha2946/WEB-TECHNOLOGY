@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <button onclick="singleClick()">single click</button>
+   <button ondblclick="doubleClick()">double click</button>
+   <input type="text" onkeydown="key()"></button>
+   <input type="text" onkeyup="key1()"></button>
+   <div id="mouseOver" onmousemove="over()">hello</div>
+
+</body>
+<script>
+    function singleClick(){
+        console.log("single clicked")
+    }
+    function doubleClick(){
+        console.log("Double clicked")
+    }
+    function key(){
+        console.log(" Heyy ")
+    }
+    function key1(){
+        console.log("Hello!!")
+    }
+    function over(){
+        document.getElementById("mouseOver").innerHTML="hiii"
+    }
+
+</script>
+</html>
