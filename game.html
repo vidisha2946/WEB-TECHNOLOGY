@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		#myImg{
+			position: absolute;
+			left: 100px;
+			top:250px;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="currentScore">0</h1>
+	<img onclick="addScore()" id="myImg" src="https://static.vecteezy.com/system/resources/previews/001/203/872/original/bee-png.png" width="100px">
+
+	<script type="text/javascript">
+		currentScore = 0;
+		function displayImage(){
+			l = parseInt(Math.random()*screen.availWidth)
+			t = parseInt(Math.random()*screen.availHeight)
+			document.getElementById('myImg').style.top = t+"px";
+			document.getElementById('myImg').style.left = l+"px";
+		}
+
+		function addScore(){
+			currentScore++;
+			document.getElementById('currentScore').innerHTML = currentScore
+		}
+		setInterval(displayImage,1000)
+	</script>
+</body>
+</html>
