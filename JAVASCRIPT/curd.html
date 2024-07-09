@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		#form, #result{
+			width: 50%;
+			float: left;
+		}
+		#errMsg{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="form">
+		<input onfocus="reset()" type="text" id="txtName" required />
+		<button onclick="addStudent()">Add</button>	
+		<br/>
+		<span id="errMsg">
+			
+		</span>
+	</div>
+	<div id="result">
+
+	</div>
+
+	<script type="text/javascript">
+		students = ['VIDISHA']
+		idToUpdate = -1;
+
+		function reset(){
+			tempStudent = document.getElementById('txtName')
+			tempStudent.style.border = "2px solid black"
+				document.getElementById('errMsg').innerHTML = ""
+		}
+
+		//CURD (Create, Update, Read, Delete)
+
+		function addStudent(){
+			tempStudent = document.getElementById('txtName')
+
+			if(tempStudent.value==""){
+				tempStudent.style.border = "2px solid red"
+				document.getElementById('errMsg').innerHTML = "Please Enter Name"
+			}
+			else{
+				if(idToUpdate>=0){
+					//edit
+					students[idToUpdate] = tempStudent.value;
+				}
+				else{
+					//add
+					students.push(tempStudent.value);
+				}
+				tempStudent.value = "";
+				displayStudent();
+				
+			}
+			
+		}
+
+		function deleteStudent(id){
+
+			ans = confirm("Are you sure you want to delete?")
+			if(ans){
+				students.splice(id,1);
+				displayStudent();	
+			}
+			
+		}
+
+		function setStudent(id){
+			idToUpdate = id;
+			document.getElementById('txtName').value = students[id];
+		}
+
+
+		function displayStudent(){
+			temp = document.getElementById('result')
+			tempString = "<table border='1'>";
+			for(i=0;i<students.length;i++){
+				tempString += "<tr>";
+				tempString += "<td>";
+				tempString += students[i];
+				tempString += "</td>";
+				tempString += "<td>";
+				tempString += "<button onclick='deleteStudent("+i+")'>Delete</button>";
+				tempString += "</td>";
+				tempString += "<td>";
+				tempString += "<button onclick='setStudent("+i+")'>Edit</button>";
+				tempString += "</td>";
+				tempString += "</tr>";
+			}
+			tempString += "</table>";
+			temp.innerHTML = tempString;
+		}
+		displayStudent();
+	</script>
+</body>
+</html>
