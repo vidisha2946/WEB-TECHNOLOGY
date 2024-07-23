@@ -1,33 +1,20 @@
 const http = require('http');
-server = http.createServer((req,res)=>{
-    if(req.url == "/about"){
-        fs.readfile("about.html",(err,data)=>{
-            if(err){
-                res.end(err);
-            }
-            else{
-                res.statuscode = 200;
-                res.setHeader('content-tyep','text/html');
-                res.writeHead(200,'content-Type','text/html')
-                res.end(data);
-            }
-        })
+const fs = require('fs');
+const server = http.createServer((req, res) => {
+    if (req.url == "/about") {
+        const data = fs.readFileSync("about.html",'utf-8');
+        res.end(data);
     }
-	else if(req.url == "/contact"){
-        fs.readFile("contact.html",(err,data)=>{
-                if(err){
-                    res.end(err);
-                }
-                else{
-                    res.statuscode = 200;
-                    res.setHeader('content-tyep','text/html');
-                    res.writeHead(200,'content-Type','text/html')
-                    res.end(data);
-                }
-        })
+    else if (req.url == "/contact") {
+        const data = fs.readFileSync("contact.html",'utf-8');
+        res.end(data);
+    }
+    else
+    {
+        const data = fs.readFileSync("web.html",'utf-8');
+        res.end(data);
     }
 });
-
-server.listen(2946,()=>{
-    console.log("server started at 2946");
+server.listen(3000, () => {
+    console.log("server started at 3000");
 });
